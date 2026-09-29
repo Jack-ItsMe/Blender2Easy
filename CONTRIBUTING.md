@@ -1,6 +1,25 @@
 # Contributing
 
-Thanks for helping make Blender2Easy easier to use and inspect. Useful contributions include small reproducible bug reports, clearer setup instructions, platform verification, focused interaction improvements and examples with explicit evaluation criteria.
+[简体中文](CONTRIBUTING.zh-CN.md) · [Back to README](README.md)
+
+You can help Blender2Easy with a reproducible bug report, clearer instructions, a platform check, a focused fix or a small example. You do not need to start with a large code change.
+
+## Start here
+
+1. Check [open issues](https://github.com/Jack-ItsMe/Blender2Easy/issues) for related work. Add useful evidence to an existing issue instead of opening a duplicate.
+2. For a substantial capability or behavior change, open an issue first to discuss the user task, proposed scope and how to verify it. Small fixes can go directly to a pull request.
+3. For public contributions, fork the repository into your own account and work on a branch. You do not need write access to this repository to propose a pull request from a fork.
+
+Replace `YOUR-USERNAME` and choose a branch name that describes your change:
+
+```sh
+git clone https://github.com/YOUR-USERNAME/Blender2Easy.git
+cd Blender2Easy
+git switch -c fix/short-description
+python -m pip install -r skills/blender2easy/scripts/requirements.txt
+```
+
+Make one focused change, run the relevant checks below, then commit and push your branch to your fork. Open a pull request targeting this repository's default branch. Explain the problem, resulting behavior and evidence; link the related issue if there is one. A small, reviewable pull request makes it easier to understand and discuss the change.
 
 ## Report a problem
 
@@ -11,7 +30,9 @@ Include:
 - A minimal project or steps that reproduce the issue; a screenshot for visual problems.
 - Whether it happens in the browser preview, a Blender render, a saved review or an exported delivery.
 
-Remove private file paths, credentials and assets you cannot redistribute. A tiny scene that reproduces a problem is more useful than an unexplained large `.blend`. Windows is currently tested; label macOS/Linux reports with the exact environment rather than assuming platform-wide support.
+Remove private file paths, credentials and assets you cannot redistribute. A tiny scene that reproduces a problem is more useful than an unexplained large `.blend`.
+
+Use the [platform check form](https://github.com/Jack-ItsMe/Blender2Easy/issues/new?template=platform-check.yml) to report an environment you tried. Record exact versions and distinguish automated tests from actually opening the preview or inspecting a Blender render. A passing CI run alone does not verify a platform's full interactive or rendering workflow.
 
 ## Work on the code
 
@@ -52,4 +73,9 @@ Keep both READMEs consistent for user-visible features and limitations. Label sc
 
 Bundled BAS files have recorded upstream hashes and local adaptations in [PROVENANCE.json](skills/blender2easy/vendor/bas/PROVENANCE.json). Preserve attribution and update the relevant provenance records when changing that code. Keep unrelated upstream refreshes separate from feature fixes.
 
-For a substantial new capability, open an issue describing the user task, how it fits the current workflow and how it can be verified. Small fixes can go directly to a pull request.
+## Before opening a pull request
+
+- Keep the diff focused and explain the behavior it changes; link an existing issue when relevant.
+- List validation commands, results and skipped or untested paths. Documentation-only changes need link and command review, not an unrelated render.
+- Include relevant UI screenshots and language/viewport checks, and update affected English and Chinese documentation.
+- Keep private paths, credentials, local projects and generated caches out of the contribution. Preserve third-party attribution and recorded provenance.

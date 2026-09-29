@@ -76,6 +76,17 @@ Keep the server running. Without an agent-created review, the default page is a 
 - [Review contract](skills/blender2easy/references/review.md) and [preview behavior](skills/blender2easy/references/editor.md)
 - [Diagnostics](skills/blender2easy/references/diagnostics.md), [quality tools](skills/blender2easy/references/quality-tools.md) and [optional MCP](skills/blender2easy/references/mcp.md)
 
+## Help improve Blender2Easy
+
+Start with a clearer setup instruction, a small example or a report from your own machine. Small, reproducible contributions are useful at this early stage.
+
+- [First contributions](https://github.com/Jack-ItsMe/Blender2Easy/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22): bounded documentation and example tasks.
+- [Help wanted](https://github.com/Jack-ItsMe/Blender2Easy/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22help%20wanted%22): platform verification and review experience checks.
+- [Community discussions](https://github.com/Jack-ItsMe/Blender2Easy/discussions): ask usage questions, discuss ideas and share examples.
+- [Contribution guide](CONTRIBUTING.md) · [中文贡献指南](CONTRIBUTING.zh-CN.md): fork, make a focused change and open a pull request.
+
+For substantial changes, discuss the scope in an issue first. Reports should distinguish browser previews, actual Blender renders and automated test results.
+
 ## Acknowledgments
 
 Blender2Easy adapts specialist workflows and tools from [Blender Agent Studio](https://github.com/ifBars/blender-agent-studio) by Bars, from commit [`748b18b`](https://github.com/ifBars/blender-agent-studio/tree/748b18ba4cbb5df6fc1da854e00e4c3526fdd128). The bundled source retains its attribution and records upstream hashes and local changes in [PROVENANCE.json](skills/blender2easy/vendor/bas/PROVENANCE.json).
@@ -83,5 +94,3 @@ Blender2Easy adapts specialist workflows and tools from [Blender Agent Studio](h
 The preview uses Three.js and bundled interface fonts. See [third-party notices](skills/blender2easy/THIRD_PARTY_NOTICES.md) for the included components and their licenses. Blender2Easy is an independent project and is not affiliated with or endorsed by the Blender Foundation.
 
 Blender2Easy's original code is available under the [MIT License](LICENSE). Bundled components retain their own notices.
-
-Bug reports, platform checks and small reproducible examples are welcome. Start with [CONTRIBUTING.md](CONTRIBUTING.md).

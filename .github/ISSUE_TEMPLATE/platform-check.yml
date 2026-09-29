@@ -1,0 +1,71 @@
+name: Platform check / 平台验证
+description: Report the exact environment and operations you verified. / 报告实际验证的环境和操作。
+title: "[Platform check] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for trying Blender2Easy. Report only what you ran. Automated CI tests, a working browser preview and a visually checked Blender render establish different things; mark untested operations as **Not run**.
+        感谢尝试 Blender2Easy。只报告实际执行的检查。自动 CI 测试、可用的浏览器预览和经过视觉检查的 Blender 渲染是不同证据；未执行的操作请标为 **未运行**。
+  - type: input
+    id: revision
+    attributes:
+      label: Blender2Easy version or commit / 版本或提交
+      description: Use the release version and, if available, the commit SHA. / 填写发布版本及可用的提交 SHA。
+      placeholder: "0.10.2 / commit SHA"
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Exact environment / 精确环境
+      description: Include exact versions, not just Windows/macOS/Linux. Mark unavailable components as not installed. / 填写精确版本，不仅是系统名称；未安装的组件请注明。
+      placeholder: |
+        OS edition/distribution, version/build and architecture / 系统版本、构建号与架构:
+        Python version and environment type (system/venv/etc.) / Python 版本与环境类型:
+        Blender version / Blender 版本:
+        Browser name and version / 浏览器名称与版本:
+        Agent host and version, if used / 使用的 Agent 宿主与版本:
+        GPU and driver, if used for rendering / 渲染所用 GPU 与驱动:
+        FFmpeg version, if testing video / 测试视频时的 FFmpeg 版本:
+    validations:
+      required: true
+  - type: textarea
+    id: automated
+    attributes:
+      label: Automated checks / 自动检查
+      description: Record the exact command or CI run link, result and skips. CI does not verify the real browser or final appearance. / 记录准确命令或 CI 链接、结果与跳过项；CI 不验证真实浏览器或最终外观。
+      placeholder: |
+        Command or CI run / 命令或 CI 链接:
+        Pass/fail/not run / 通过、失败或未运行:
+        Skipped checks / 跳过的检查:
+        Relevant output, with personal paths removed / 已移除私人路径的相关输出:
+    validations:
+      required: true
+  - type: textarea
+    id: manual
+    attributes:
+      label: Actual preview and render checks / 实际预览与渲染检查
+      description: Describe the project and steps for each operation you tried. Mark the others not run; do not infer a pass from CI. / 分别说明实际操作的项目与步骤；其余填写未运行，不从 CI 结果推断通过。
+      placeholder: |
+        CLI doctor result / CLI doctor 结果:
+        Browser preview: project, controls tried, result / 浏览器预览：项目、操作及结果:
+        Review feedback saved/read/applied, if tried / 是否测试反馈保存、读取与应用:
+        Blender render: command, frames, result and visual inspection / Blender 渲染：命令、帧、结果与视觉检查:
+        Video encode/verify, if tried / 是否测试视频编码与核验:
+        Optional MCP operations, if tried / 是否测试可选 MCP 操作:
+        Not run / 未运行:
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and remaining problems / 证据与遗留问题
+      description: Attach shareable screenshots or small logs; describe failures, workarounds and limits of the check. / 附上可分享的截图或简短日志，说明失败、临时解决方法及验证边界。
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Shareable report / 可分享的报告
+      options:
+        - label: I removed credentials and personal paths, and only attached assets I can redistribute. / 已移除凭据与私人路径，仅附上有权再分发的资产。
+          required: true

@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Usage questions / 使用答疑
+    url: https://github.com/Jack-ItsMe/Blender2Easy/discussions/categories/q-a
+    about: Ask installation and workflow questions. / 询问安装和使用流程。
+  - name: Discuss an idea / 讨论想法
+    url: https://github.com/Jack-ItsMe/Blender2Easy/discussions/categories/ideas
+    about: Discuss an early proposal before defining a task. / 在确定任务范围前讨论初步想法。

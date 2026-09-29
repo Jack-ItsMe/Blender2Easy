@@ -4,7 +4,7 @@
 
 **用 Blender 制作，和 Agent 一起看清、调准。**
 
-[English](README.md) · [快速开始](docs/getting-started.zh-CN.md) · [使用示例](docs/examples.md) · [参与贡献](CONTRIBUTING.md)
+[English](README.md) · [快速开始](docs/getting-started.zh-CN.md) · [使用示例](docs/examples.md) · [参与贡献](CONTRIBUTING.zh-CN.md)
 
 Blender2Easy 是一套面向 Agent 的技能和本地工具，用于创建、修改三维物件及展示动画。Agent 在 Blender 中准备场景；需要你判断外形、动作、镜头或成片时，再打开一个聚焦当前问题的 Three.js 预览工作区。
 
@@ -76,6 +76,17 @@ python skills/blender2easy/scripts/animation.py editor work/box-demo/project.jso
 - [反馈契约](skills/blender2easy/references/review.md)与[预览行为](skills/blender2easy/references/editor.md)
 - [结构诊断](skills/blender2easy/references/diagnostics.md)、[质量工具](skills/blender2easy/references/quality-tools.md)和[可选 MCP](skills/blender2easy/references/mcp.md)
 
+## 一起改进 Blender2Easy
+
+可以从改清楚一条安装说明、补一个小示例，或报告自己设备上的使用结果开始。项目仍在早期，小而可复现的贡献很有帮助。
+
+- [适合首次贡献的任务](https://github.com/Jack-ItsMe/Blender2Easy/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22good%20first%20issue%22)：范围明确的文档与示例工作。
+- [需要协助的任务](https://github.com/Jack-ItsMe/Blender2Easy/issues?q=is%3Aissue%20is%3Aopen%20label%3A%22help%20wanted%22)：平台验证和预览体验检查。
+- [社区讨论](https://github.com/Jack-ItsMe/Blender2Easy/discussions)：使用答疑、方向讨论和示例分享。
+- [中文贡献指南](CONTRIBUTING.zh-CN.md) · [English guide](CONTRIBUTING.md)：Fork 仓库、完成小范围改动、提交 PR。
+
+较大改动先在 Issue 中讨论范围。报告结果时，请区分浏览器预览、真实 Blender 渲染和自动测试。
+
 ## 致谢
 
 Blender2Easy 改编和集成了 Bars 的 [Blender Agent Studio](https://github.com/ifBars/blender-agent-studio) 专项工作流及工具，基于提交 [`748b18b`](https://github.com/ifBars/blender-agent-studio/tree/748b18ba4cbb5df6fc1da854e00e4c3526fdd128)。保留的署名、上游文件哈希与本地改动记录见 [PROVENANCE.json](skills/blender2easy/vendor/bas/PROVENANCE.json)。
@@ -83,5 +94,3 @@ Blender2Easy 改编和集成了 Bars 的 [Blender Agent Studio](https://github.c
 预览使用 Three.js 和随包分发的界面字体，各组件许可见[第三方声明](skills/blender2easy/THIRD_PARTY_NOTICES.md)。Blender2Easy 是独立项目，与 Blender Foundation 无隶属或背书关系。
 
 Blender2Easy 原创代码采用 [MIT 许可证](LICENSE)，随包组件保留各自声明。
-
-欢迎提交问题、平台验证结果和小型可复现示例，参与方式见 [CONTRIBUTING.md](CONTRIBUTING.md)。
