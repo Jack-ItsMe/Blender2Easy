@@ -6,7 +6,7 @@
 
 需要 Python、Blender 和支持 WebGL 的浏览器。本文档使用能够读写项目文件、执行本地命令的 Codex 宿主。浏览器负责预览和反馈，不包含 Agent 或大语言模型。
 
-当前已验证 Windows；源码包含 macOS/Linux 的部分路径和发现逻辑，但这两个平台尚未验证。首次使用不需要 MCP，它使用单独的依赖配置。
+Blender/浏览器工作流已在 Windows 验证。CI 覆盖 Windows 和 Linux 的单元、前端及 MCP 检查，但不代表已验证 Linux 的 Blender 渲染或浏览器视觉效果；macOS 尚未验证。首次使用不需要 MCP，它使用单独的依赖配置。
 
 已检查的 Windows 环境为 **Python 3.12.14、Blender 5.2.1 LTS、FFmpeg 7.1**。这是验证过的组合，不代表所有更早或更新版本都已兼容。
 

@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.10.2
+
+- Resolve temporary fixture paths before comparing them in tests, including
+  Windows 8.3 aliases used by hosted runners. Production workflow behavior is unchanged.
+
+This is the release recommended for the public launch. Version 0.10.1 records
+the initial repository upload and remains available for reference.
+
 ## 0.10.1
 
 First GitHub release under the **Blender2Easy** name, continuing the local

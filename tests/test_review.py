@@ -22,7 +22,8 @@ from animkit.common import read_json, sha256, write_json
 class ReviewTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
-        self.path = Path(self.temp.name) / "project.json"
+        # The injected write hook compares the canonical path used by review.
+        self.path = Path(self.temp.name).resolve() / "project.json"
         self.raw = read_json(ROOT / "assets/templates/box.json")
         write_json(self.path, self.raw)
         self.spec = {

@@ -19,7 +19,8 @@ class QualityReviewTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
-        self.root = Path(self.temp.name)
+        # Hand-built asset hashes must use the canonical keys produced at runtime.
+        self.root = Path(self.temp.name).resolve()
         self.path = self.root / 'project.json'
         self.raw = read_json(ROOT / 'assets/templates/box.json')
         write_json(self.path, self.raw)

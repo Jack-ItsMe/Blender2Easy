@@ -18,7 +18,8 @@ class QualityAdapterTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
-        self.base = Path(self.temp.name)
+        # Adapter paths are canonical; Windows TEMP may return an 8.3 alias.
+        self.base = Path(self.temp.name).resolve()
         self.asset = self.base / "fixture.blend"
         self.asset.write_bytes(b"bounded test fixture")
         self.spec = {"input": "fixture.blend", "outputDir": "new-output"}

@@ -26,7 +26,8 @@ class PackagingTests(unittest.TestCase):
     def setUp(self):
         temporary = tempfile.TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
-        self.root = Path(temporary.name)
+        # Match SOURCE's resolved __file__ identity even when TEMP uses 8.3 names.
+        self.root = Path(temporary.name).resolve()
         self.source = self.root / "source"
         self.destination = self.root / "codex/skills"
         self.files = {"SKILL.md": "---\nname: blender2easy\ndescription: Test fixture.\n---\n",

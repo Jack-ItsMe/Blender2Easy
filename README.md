@@ -10,7 +10,7 @@ Blender2Easy is an agent skill and local toolkit for creating and refining 3D ob
 
 You can point to a part, compare a reference, or adjust the few parameters relevant to the current question. The agent receives that context, checks the proposed changes and continues the work.
 
-**Version 0.10.1 · Early release · Tested on Windows; macOS and Linux are not yet verified.**
+**Version 0.10.2 · Early release · Blender/browser workflow tested on Windows; Linux unit and MCP checks run in CI. macOS is not yet verified.**
 
 ![Blender2Easy review workspace showing a model and focused adjustment controls](docs/media/workspace.jpg)
 

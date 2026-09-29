@@ -6,7 +6,7 @@
 
 Use Python, Blender and a browser with WebGL support. The documented workflow uses a local Codex host with permission to read/write project files and launch commands. The browser is a review surface; it does not contain an agent or language model.
 
-Windows is the tested platform. macOS/Linux commands and discovery paths are present, but those platforms have not yet been verified. MCP is optional and uses a separate dependency set; leave it out for the first run.
+The Blender/browser workflow has been tested on Windows. CI covers unit, frontend and MCP checks on Windows and Linux; it does not validate Linux Blender rendering or browser appearance. macOS is not yet verified. MCP is optional and uses a separate dependency set; leave it out for the first run.
 
 The checked Windows environment uses **Python 3.12.14, Blender 5.2.1 LTS and FFmpeg 7.1**. These are tested versions, not a claim that every earlier or later combination works.
 

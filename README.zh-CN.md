@@ -10,7 +10,7 @@ Blender2Easy 是一套面向 Agent 的技能和本地工具，用于创建、修
 
 你可以指出具体部件、对照参考图，或调整当前开放的少量参数。Agent 读取这些位置和意见，核验修改后继续制作。
 
-**版本 0.10.1 · 早期版本 · 已在 Windows 验证，macOS 和 Linux 尚未验证。**
+**版本 0.10.2 · 早期版本 · Blender/浏览器工作流已在 Windows 验证；Linux 单元及 MCP 检查由 CI 覆盖；macOS 尚未验证。**
 
 ![Blender2Easy 的模型预览与局部调整工作区](docs/media/workspace.jpg)
 
