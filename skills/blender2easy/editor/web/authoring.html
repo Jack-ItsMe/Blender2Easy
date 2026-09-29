@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title data-i18n="authoring.pageTitle">Blender2Easy · Three.js Editor</title>
+  <script src="/preferences-init.js"></script>
+  <link rel="stylesheet" href="/fonts/fonts.css">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/theme.css">
+  <link rel="stylesheet" href="/interactions.css">
+  <script type="importmap">{"imports":{"three":"/vendor/three/build/three.module.js","three/addons/":"/vendor/three/examples/jsm/"}}</script>
+</head>
+<body>
+<svg class="symbols" aria-hidden="true"><defs>
+ <symbol id="i-cube" viewBox="0 0 24 24"><path d="m12 3 9 5v9l-9 5-9-5V8Zm0 0v10m9-5-9 5-9-5m9 5v9"/></symbol>
+ <symbol id="i-save" viewBox="0 0 24 24"><path d="M5 3h12l4 4v14H3V3Zm2 0v7h10V3M7 21v-7h10v7"/></symbol>
+ <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6h7l2 3h9v11H3ZM3 6V4h7l2 2h8v3"/></symbol>
+ <symbol id="i-undo" viewBox="0 0 24 24"><path d="m8 4-5 5 5 5M3 9h11a6 6 0 0 1 0 12"/></symbol>
+ <symbol id="i-redo" viewBox="0 0 24 24"><path d="m16 4 5 5-5 5m5-5H10a6 6 0 0 0 0 12"/></symbol>
+ <symbol id="i-camera" viewBox="0 0 24 24"><path d="M3 7h12v12H3Zm12 4 6-4v12l-6-4Z"/></symbol>
+ <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 4 13 8-13 8Z"/></symbol>
+ <symbol id="i-pause" viewBox="0 0 24 24"><path d="M7 4v16M17 4v16"/></symbol>
+ <symbol id="i-fit" viewBox="0 0 24 24"><path d="M3 9V3h6m6 0h6v6m0 6v6h-6M9 21H3v-6M8 8h8v8H8Z"/></symbol>
+ <symbol id="i-move" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20m-13-7 3-3 3 3m-6 14 3 3 3-3M5 9l-3 3 3 3m14-6 3 3-3 3"/></symbol>
+ <symbol id="i-rotate" viewBox="0 0 24 24"><path d="M20 10a8 8 0 1 0 0 5M20 3v7h-7"/></symbol>
+ <symbol id="i-scale" viewBox="0 0 24 24"><path d="M3 14h7v7H3Zm7 0L21 3m-7 0h7v7"/></symbol>
+ <symbol id="i-light" viewBox="0 0 24 24"><path d="M8 18h8m-7 4h6m-3-20v2M2 12h2m16 0h2M4 4l2 2m12 0 2-2M8 16a6 6 0 1 1 8 0v2H8Z"/></symbol>
+ <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></symbol>
+ <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></symbol>
+ <symbol id="i-diamond" viewBox="0 0 24 24"><path d="m12 3 9 9-9 9-9-9Z"/></symbol>
+</defs></svg>
+<main id="editor">
+  <header class="app-header">
+    <div class="brand"><span class="brand-mark"><svg><use href="#i-cube"/></svg></span><div><strong data-i18n="authoring.brand">Blender2Easy</strong></div></div>
+    <div class="project-identity"><span id="project-title" data-i18n="authoring.connecting">Connecting to local workspace…</span><span id="save-state" class="save-state" data-i18n="authoring.loading">Loading</span></div>
+    <div class="header-actions">
+      <div class="header-file-actions">
+      <button id="new-btn" class="quiet" title="New project" data-i18n-title="authoring.newProject"><svg><use href="#i-plus"/></svg><span data-i18n="authoring.new">New</span></button>
+      <button id="open-btn" class="quiet" title="Open a JSON project or import a Blender file" data-i18n-title="authoring.openHint"><svg><use href="#i-folder"/></svg><span data-i18n="authoring.open">Open</span></button>
+      <span class="separator"></span>
+      <button id="undo-btn" class="icon-btn quiet" title="Undo Ctrl+Z" data-i18n-title="authoring.undoHint" aria-label="Undo" data-i18n-aria-label="authoring.undo" disabled><svg><use href="#i-undo"/></svg></button>
+      <button id="redo-btn" class="icon-btn quiet" title="Redo Ctrl+Shift+Z" data-i18n-title="authoring.redoHint" aria-label="Redo" data-i18n-aria-label="authoring.redo" disabled><svg><use href="#i-redo"/></svg></button>
+      <button id="save-btn" title="Save Ctrl+S" data-i18n-title="authoring.saveHint"><svg><use href="#i-save"/></svg><span data-i18n="authoring.save">Save</span></button>
+      </div>
+      <div class="header-output-actions">
+      <button id="preview-btn" title="Save changes and render the current source frame in Blender" data-i18n-title="authoring.previewHint"><svg><use href="#i-camera"/></svg><span data-i18n="authoring.preview">Blender preview</span></button>
+      <button id="render-btn" class="primary"><svg><use href="#i-play"/></svg><span data-i18n="authoring.renderShot">Render shot</span></button>
+      </div>
+      <div data-ui-preferences></div>
+    </div>
+  </header>
+  <aside class="hierarchy-panel panel">
+    <div class="panel-heading"><h1 data-i18n="authoring.scene">Scene</h1><span id="object-count" class="count">0</span><button id="add-btn" class="icon-btn quiet" title="Add object" data-i18n-title="authoring.addObject" aria-label="Add object" data-i18n-aria-label="authoring.addObject"><svg><use href="#i-plus"/></svg></button></div>
+    <label class="search-field"><svg><use href="#i-search"/></svg><input id="object-search" type="search" placeholder="Find objects or cameras" data-i18n-placeholder="authoring.searchPlaceholder" aria-label="Search scene" data-i18n-aria-label="authoring.searchScene"></label>
+    <div id="hierarchy" class="hierarchy" role="tree" aria-label="Scene hierarchy" data-i18n-aria-label="authoring.sceneHierarchy"></div>
+    <div class="library-block"><span class="section-eyebrow" data-i18n="authoring.workspace">Workspace</span><div id="mode-badge" class="mode-badge" data-i18n="authoring.proceduralScene">Parametric scene</div><p id="project-path" class="path-label"></p><button id="import-btn" class="wide quiet"><svg><use href="#i-folder"/></svg><span data-i18n="authoring.importBlend">Import Blender scene</span></button></div>
+  </aside>
+  <div class="authoring-board">
+  <section class="viewport-panel">
+    <div class="viewport-toolbar"><div class="tool-cluster" aria-label="Transform tools" data-i18n-aria-label="authoring.transformTools">
+      <button class="icon-btn tool active" data-mode="translate" title="Move W" data-i18n-title="authoring.moveHint" aria-label="Move" data-i18n-aria-label="authoring.move"><svg><use href="#i-move"/></svg></button>
+      <button class="icon-btn tool" data-mode="rotate" title="Rotate E" data-i18n-title="authoring.rotateHint" aria-label="Rotation" data-i18n-aria-label="authoring.rotate"><svg><use href="#i-rotate"/></svg></button>
+      <button class="icon-btn tool" data-mode="scale" title="Scale R" data-i18n-title="authoring.scaleHint" aria-label="Scale" data-i18n-aria-label="authoring.scale"><svg><use href="#i-scale"/></svg></button>
+    </div><span class="toolbar-divider"></span><button id="fit-btn" class="quiet small"><svg><use href="#i-fit"/></svg><span data-i18n="authoring.fitScene">Fit scene</span></button><label class="grid-toggle"><input id="grid-toggle" type="checkbox" checked><span data-i18n="authoring.gridToggle">Grid</span></label><div class="toolbar-spacer"></div><select id="view-camera" aria-label="Viewport camera" data-i18n-aria-label="authoring.viewportCamera"><option value="" data-i18n="authoring.freeView">Free view</option></select></div>
+    <div id="viewport"><div id="viewport-message" class="viewport-message" hidden></div><div class="viewport-label"><span class="live-dot"></span><span data-i18n="authoring.liveViewport">Live viewport</span></div><div class="viewport-help" data-i18n="authoring.viewportHelp">Left drag to orbit · Right drag to pan · Scroll to zoom</div><div class="axis-legend"><span>X</span><span>Y</span><span>Z</span></div></div>
+    <div class="preview-note"><span data-i18n="authoring.previewNote">Live materials and BEZIER interpolation are approximate. Blender renders determine the final output.</span><button id="results-toggle" class="text-btn" hidden data-i18n="authoring.viewResults">View render results</button></div>
+    <section id="results-panel" class="results-panel" hidden><div class="results-heading"><strong data-i18n="authoring.blenderOutput">Blender output</strong><span id="result-meta"></span><button id="results-close" class="quiet icon-btn" aria-label="Close results" data-i18n-aria-label="authoring.closeResults">×</button></div><div id="results-content"></div></section>
+  </section>
+
+  <section class="timeline-panel">
+    <div class="timeline-toolbar"><div class="timeline-shot-controls"><span class="timeline-label" data-i18n="authoring.shot">Shot</span><select id="shot-select" aria-label="Current shot" data-i18n-aria-label="authoring.currentShot"></select><button id="shot-add" class="icon-btn quiet" title="Add shot" data-i18n-title="authoring.addShot" aria-label="Add shot" data-i18n-aria-label="authoring.addShot"><svg><use href="#i-plus"/></svg></button><span id="shot-duration" class="muted"></span></div><div class="toolbar-spacer"></div><div class="timeline-key-controls"><label id="autokey-label" class="autokey"><input id="autokey" type="checkbox"><svg><use href="#i-diamond"/></svg><span data-i18n="authoring.editKeyframes">Edit keyframes</span></label><select id="interpolation" aria-label="Keyframe interpolation" data-i18n-aria-label="authoring.interpolation"><option value="BEZIER" data-i18n="authoring.smooth">Smooth</option><option value="LINEAR" data-i18n="authoring.linear">Linear</option><option value="CONSTANT" data-i18n="authoring.constant">Step</option></select><button id="key-add" class="small"><svg><use href="#i-diamond"/></svg><span data-i18n="authoring.recordPose">Record pose</span></button></div></div>
+    <div class="timeline-body"><div class="playback-controls"><button id="first-frame" class="quiet icon-btn" title="First frame" data-i18n-title="authoring.firstFrame" aria-label="First frame" data-i18n-aria-label="authoring.firstFrame">|‹</button><button id="play-btn" class="play-button" title="Play / pause Space" data-i18n-title="authoring.playHint" aria-label="Play" data-i18n-aria-label="authoring.play"><svg><use href="#i-play"/></svg></button><button id="last-frame" class="quiet icon-btn" title="Last frame" data-i18n-title="authoring.lastFrame" aria-label="Last frame" data-i18n-aria-label="authoring.lastFrame">›|</button><div class="frame-readout"><strong id="frame-display">001</strong><span data-i18n="authoring.sourceFrame">Source frame</span></div></div><div class="timeline-track"><div id="timeline-ruler" class="timeline-ruler"></div><div id="key-markers" class="key-markers"></div><input id="timeline" type="range" min="0" max="47" value="0" step="1" aria-label="Output frame timeline" data-i18n-aria-label="authoring.outputTimeline"><div class="timeline-bottom"><span id="timeline-selection" data-i18n="authoring.selectForKeys">Select an object to view keyframes</span><span id="output-frame-display" data-i18n="authoring.initialOutput">Output 1 / 48</span></div></div></div>
+  </section>
+  </div>
+  <aside class="inspector-panel panel"><div class="inspector-tabs" role="tablist"><button role="tab" data-tab="object" class="active" data-i18n="authoring.object">Object</button><button role="tab" data-tab="material" data-i18n="authoring.material">Material</button><button role="tab" data-tab="camera" data-i18n="authoring.camera">Camera</button><button role="tab" data-tab="output" data-i18n="authoring.output">Output</button></div><div id="inspector" class="inspector"></div></aside>
+  <footer class="statusbar"><span id="connection-status"><i></i><span data-i18n="authoring.localWorkspace">Local workspace</span></span><span id="status-message" data-i18n="authoring.ready">Ready</span><div class="toolbar-spacer"></div><span id="render-summary"></span></footer>
+</main>
+<div id="toast" role="status" hidden></div>
+<dialog id="workspace-dialog"><form method="dialog" id="workspace-form"><div class="dialog-head"><div><p class="section-eyebrow" data-i18n="authoring.localWorkspace">Local workspace</p><h2 id="dialog-title" data-i18n="authoring.openProject">Open project</h2></div><button value="cancel" formnovalidate class="icon-btn quiet" aria-label="Close dialog" data-i18n-aria-label="authoring.closeDialog">×</button></div><div id="dialog-content"></div><p id="dialog-error" class="error-text" hidden></p><div class="dialog-actions"><button value="cancel" formnovalidate data-i18n="authoring.cancel">Cancel</button><button id="dialog-submit" value="submit" class="primary" data-i18n="authoring.open">Open</button></div></form></dialog>
+<script type="module" src="/app.js"></script>
+<script type="module" src="/interactions.js"></script>
+</body></html>

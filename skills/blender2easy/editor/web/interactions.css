@@ -1,0 +1,44 @@
+/* Shared micro-interactions only. Palette, layout and range tracks belong to the pages. */
+.workspace-tooltip {
+  position: fixed;
+  z-index: 1000;
+  max-inline-size: min(280px, calc(100vw - 20px));
+  padding: 8px 11px;
+  border: 1px solid var(--line-strong, var(--line, #363a42));
+  border-radius: 7px;
+  background: var(--surface-raised, #25282e);
+  color: var(--ink, #edf0f5);
+  box-shadow: 0 5px 18px var(--shadow-color, #00000038);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 450;
+  line-height: 1.5;
+  text-align: start;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  animation: workspace-tooltip-in 100ms ease-out;
+}
+.workspace-tooltip[hidden] { display: none; }
+@keyframes workspace-tooltip-in {
+  from { opacity: 0; translate: 0 2px; }
+  to { opacity: 1; translate: 0 0; }
+}
+:where(button, summary, .button-link) {
+  transition: background-color 110ms ease, border-color 110ms ease, color 110ms ease, translate 90ms ease;
+}
+:where(button, summary, .button-link):not(:disabled):not([aria-disabled="true"]):active {
+  translate: 0 1px;
+  filter: brightness(.96);
+}
+:where(button, summary, .button-link):focus-visible {
+  outline: 2px solid var(--focus-ring, #bdc8ff);
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .workspace-tooltip { animation: none; }
+  :where(button, summary, .button-link) { transition: none; }
+  :where(button, summary, .button-link):not(:disabled):not([aria-disabled="true"]):active { translate: none; }
+}

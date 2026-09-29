@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "object-project",
+  "units": "m",
+  "assets": [],
+  "scene": {
+    "background": [0.94, 0.95, 0.97],
+    "world_strength": 0.7,
+    "materials": [],
+    "objects": [],
+    "cameras": [{"id": "hero", "location": [4, -6, 4], "target": [0, 0, 0], "type": "ORTHO", "ortho_scale": 5, "lens": 50}],
+    "lights": [{"id": "key", "type": "AREA", "location": [3, -4, 6], "target": [0, 0, 0], "energy": 600, "size": 5}],
+    "animation": []
+  },
+  "render": {"fps": 24, "resolution": [640, 360], "samples": 16, "engine": "BLENDER_EEVEE", "transparent": false},
+  "shots": [{"id": "hero-shot", "title": "Object presentation", "source_range": [1, 48], "camera": "hero", "timing": [{"source_range": [1, 48], "frames": 48, "anchors": [1, 48]}], "overlays": []}]
+}

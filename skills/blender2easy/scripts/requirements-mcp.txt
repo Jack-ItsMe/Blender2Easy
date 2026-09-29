@@ -1,0 +1,5 @@
+# Optional stdio server. Ordinary CLI use does not depend on MCP.
+# Official stable SDK; protocol/framing/lifecycle are owned by this dependency.
+mcp==2.2.0
+# Install production dependencies in the same isolated server interpreter.
+-r requirements.txt

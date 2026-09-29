@@ -1,0 +1,44 @@
+{
+  "name": "blender-agent-studio",
+  "version": "0.6.4",
+  "description": "Iterative, evidence-driven Blender 5.2 creation, validation, repair, animation, and regression-safe benchmark workflows.",
+  "author": {
+    "name": "Bars",
+    "url": "https://github.com/ifBars"
+  },
+  "homepage": "https://github.com/ifBars/blender-agent-studio#readme",
+  "repository": "https://github.com/ifBars/blender-agent-studio.git",
+  "license": "MIT",
+  "keywords": [
+    "blender",
+    "codex",
+    "agent-skills",
+    "mcp",
+    "benchmarking"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Blender Agent Studio",
+    "shortDescription": "Build, simulate, render, and benchmark Blender work",
+    "longDescription": "Evidence-driven Blender 5.2 workflows for reproducible models, Geometry Nodes, rendering, physics simulations, character rigs, critique-and-repair iteration, and regression-safe paired benchmarks.",
+    "developerName": "Bars",
+    "category": "Developer Tools",
+    "websiteURL": "https://github.com/ifBars/blender-agent-studio",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Build a Blender model from this request.",
+      "Critique the first complete Blender result, repair its highest-impact defect, and verify no regression.",
+      "Clarify this Blender brief and create an optional concept mockup.",
+      "Validate this Blender asset and render evidence.",
+      "Create and validate a Blender fluid or physics simulation.",
+      "Benchmark this Blender agent workflow."
+    ],
+    "brandColor": "#E87D0D",
+    "composerIcon": "./assets/blender-icon.png",
+    "logo": "./assets/blender-icon.png"
+  },
+  "mcpServers": "./.mcp.json"
+}

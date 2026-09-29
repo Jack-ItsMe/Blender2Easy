@@ -1,0 +1,71 @@
+{
+  "title": "确认盒盖打开效果",
+  "question": "盒盖打开到这里，内部是否看得清？",
+  "context": "外观已经确定。先展示外观，再打开盒盖，最后停留展示内部；这次只调整后两个段落。",
+  "stage": "motion",
+  "thread_id": "review-http-test",
+  "segments": [
+    {
+      "id": "intro",
+      "title": "展示外观",
+      "source_range": [
+        1,
+        6
+      ]
+    },
+    {
+      "id": "open",
+      "title": "打开盒盖",
+      "source_range": [
+        7,
+        38
+      ]
+    },
+    {
+      "id": "inside",
+      "title": "展示内部",
+      "source_range": [
+        39,
+        48
+      ]
+    }
+  ],
+  "focus": {
+    "shot_id": "opening",
+    "segment_id": "open",
+    "object_ids": [
+      "hinge",
+      "lid"
+    ],
+    "source_frame": 38,
+    "source_range": [
+      7,
+      48
+    ],
+    "camera_id": "hero"
+  },
+  "controls": [
+    {
+      "id": "angle",
+      "label": "打开角度",
+      "kind": "number",
+      "unit": "°",
+      "min": 60,
+      "max": 120,
+      "step": 1,
+      "value": 108,
+      "bindings": [
+        {
+          "path": "/scene/animation/0/keys/2/value/0",
+          "scale": -1,
+          "offset": 0
+        },
+        {
+          "path": "/scene/animation/0/keys/3/value/0",
+          "scale": -1,
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}

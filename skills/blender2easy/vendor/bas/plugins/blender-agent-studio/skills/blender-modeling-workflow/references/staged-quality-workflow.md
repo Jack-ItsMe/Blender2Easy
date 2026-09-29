@@ -1,0 +1,92 @@
+# Staged quality workflow
+
+Use applicable stages for finished asset work. Source mode, delivery and local
+repair scope follow the [shared contract](../../../../../../../references/source-delivery.md).
+Only affected stages reopen for a revision. A stage is complete when its
+applicable exit criteria are visible in evidence or measurable in the scene.
+
+## 1. Contract and references
+
+- Record required parts, spatial relationships, style, scale, finish profile,
+  performance target, deliverables, and review views.
+- Record whether low-poly is explicitly requested.
+- Identify the intended view distance and the hardest silhouette or contact
+  relationship to judge.
+- Retrieve and open complementary references for new recognizable subjects.
+  Record source URLs, useful angles, observed relationships and unresolved gaps
+  in `reference_notes.md`. Keep anatomy/structure separate from visual style.
+
+Exit when the contract, reference observations and review questions are explicit.
+If retrieval is unavailable, record the limitation and modeling assumptions.
+
+## 2. Graybox and proportion
+
+- Build only major masses, room volumes, clearances, pivots, and contact planes.
+- Use neutral materials and labels where they improve spatial review.
+- Check scale, silhouette, negative space, access, and the relationship between
+  every required major part.
+- Compare similar-angle references and graybox renders for the recorded
+  proportions. Resolve important silhouette errors before surface detail.
+
+Exit when proportions and layout work from front, side, top, and perspective
+views. A graybox is not a finished asset.
+
+## 3. Primary and secondary forms
+
+- Replace proxy primitives with intentional shapes.
+- Add real supports, attachments, openings, handles, panels, seams, and
+  transitions that explain construction.
+- Establish the visual hierarchy before small decoration.
+
+Exit when the asset is identifiable from silhouette and no functional part
+looks attached by coincidence.
+
+## 4. Structural refinement and production topology
+
+- Resolve intersections, floating parts, wall penetration, z-fighting, thin
+  unsupported spans, pivots, normals, and deformation or export risks.
+- Add bevels, support loops, subdivision, weighted normals, curve resolution,
+  or manual topology appropriate to the finish profile.
+- Preserve intentional low-poly faceting only when requested.
+
+Exit when the evaluated geometry is clean, all contact relationships are
+believable, and broad curves do not look accidentally faceted.
+
+## 5. UVs, materials, and textures
+
+- Give visible meshes intentional UVs or procedural coordinates.
+- Build materials that describe distinct substances through color, roughness,
+  metallic, transmission, normal, and restrained surface variation.
+- Verify texture paths and render-engine compatibility.
+
+Exit when no surface reads as default gray, accidental black, missing-magenta,
+or indistinguishable from a different requested substance.
+
+## 6. Tertiary detail and presentation polish
+
+- Add only detail that reinforces scale, use, construction, wear, or style.
+- Inspect the closest required view for faceting, razor edges, blockout residue,
+  arbitrary decoration, noisy detail, and weak focal hierarchy.
+- Balance lighting and exposure; do not use lighting to hide geometry defects.
+
+Exit when the asset reads as intentionally finished from every required view,
+not merely acceptable from the hero camera.
+
+## 7. Requested delivery and validation
+
+- Reopen or regenerate the selected durable source with its dependencies.
+- When an exported asset is requested, export that format and import it in a
+  fresh process. Compare the required names, hierarchy, dimensions, materials,
+  UVs, shading, animation and critical frames.
+- For image/video delivery, inspect the requested media without adding a model
+  export. Choose final evidence for the contracted scope.
+
+Exit when the durable source reproduces the requested deliverables and their
+applicable authored, media and export checks pass.
+
+## Approval behavior
+
+When the user requests approval-gated work, stop at the agreed stage boundary,
+show multiple useful angles, state what is intentionally unfinished, and wait.
+Do not advance because the current stage is technically valid. When no approval
+gate was requested, keep the same stages but self-review and continue.

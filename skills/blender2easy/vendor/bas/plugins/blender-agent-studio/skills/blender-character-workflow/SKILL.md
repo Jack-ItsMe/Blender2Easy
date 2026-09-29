@@ -1,0 +1,107 @@
+---
+name: blender-character-workflow
+description: Create, repair, rig, skin, animate, and export Blender characters, creatures, avatars, and facial rigs with deformation and runtime validation. Use when a request involves a character mesh, armature, weights, IK/FK, blend shapes, facial animation, humanoid/VRM/game export, or deformation quality.
+---
+
+# Blender Character Workflow
+
+> Blender2Easy integration: paths resolve within this bundled BAS tree.
+> Apply the [source, delivery and revision contract](../../../../../../references/source-delivery.md)
+> before domain checks. Native Blender sources, requested export formats and
+> local repair scope follow that contract. Upstream `blender_*` tools are
+> optional; see [local execution routes](../../../../../../references/specialists.md).
+
+Read [shared Blender execution guidance](../../references/execution.md) once
+when using a specialist; load only the domain references needed below.
+
+Match completion to the requested character: a static sculpt needs form and
+surface evidence; a rigged or animated character also needs deformation
+evidence. A mesh plus an armature is not a finished rig. Clarify static versus
+rigged delivery if the request and context leave that consequential choice open.
+
+## Establish the character contract
+
+Record intended platform and export format, body/face scope, scale and axis,
+triangle/material/texture budgets, bone naming and hierarchy requirements,
+required controls, facial shape keys, poses/actions, and engine/avatar
+constraints. For a requested rig, identify the minimum acceptance poses: neutral, extreme bend for
+each major joint, reach, twist, locomotion/contact, and any required facial
+expression.
+
+## Review character form and fit
+
+Read [character form and fit review](references/character-form-review.md) for
+humanoid creation and substantial anatomy/clothing repairs. Establish torso,
+pelvis, boot and hand proportions against the references before adding detail.
+Inspect continuous garment/joint surfaces, fitted accessories and skin-texture
+consistency in neutral and moving poses. These are visual acceptance criteria;
+passing rig/export metrics alone does not satisfy them.
+
+## Build and rig deliberately
+
+For static character requests, build and review the form without inventing a
+rigging requirement. The rigging and motion steps below apply when requested.
+
+Retrieve anatomy references with compatible species, age and pose before building
+a new character or creature. For a low-poly brown bear, for example, look for
+whole-body front, profile and three-quarter views in a comparable stance, plus
+head and paw close-ups. Record body/head proportions, muzzle depth, shoulder
+shape and foot contact from those images. Use separate low-poly examples for
+plane simplification; do not replace anatomy with a generic animal silhouette
+or infer all four legs from one occluded photograph.
+
+1. Keep the authored mesh, armature, controls, deformation helpers, and export
+   mesh in named collections. Apply or deliberately preserve transforms before
+   skinning; document the choice.
+2. Create anatomically or mechanically plausible joint placement and semantic
+   bone names. Separate deform bones from animator controls where the target
+   benefits from it.
+3. Keep symmetry and mirror workflows explicit. Limit vertex influences and
+   normalize weights according to the target runtime requirements.
+4. Add IK/FK, constraints, corrective shapes, or drivers only when they solve a
+   named deformation need. Test without relying on a single flattering pose.
+5. For facial work, name shape keys semantically and test combinations that
+   reveal volume loss, collisions, or eyelid/mouth failures.
+
+## Validate export and motion
+
+1. Render the neutral and every contract pose from front, profile, back, and
+   close-up deformation views. Open the evidence.
+2. Check volume preservation, joint collapse, candy-wrapper twisting, clipping,
+   foot/hand contact, constraint cycles, control readability, and unwanted
+   scale/shear.
+3. When the contract includes an exported character, fresh-import its requested
+   format in a clean process and compare hierarchy, supported skin weights, materials,
+   actions, frame ranges, scale, and orientation.
+4. Use `$blender-agent-studio:blender-animation-workflow` for action timing and
+   `$blender-agent-studio:blender-asset-validation` for authored/exported
+   geometry and hierarchy evidence.
+
+## Fit modular VRChat hair
+
+For arbitrary head and hair assets, use `scripts/fit_vrchat_hair.py`. It fits
+the largest semantic hair mesh against the upper cranial region in evaluated
+world space while applying one uniform transform to the complete hair rig.
+Do not align the full hairstyle minimum Z to the head top; hanging strands and
+ponytails make that measurement invalid.
+
+Require a 1-8 mm median fitted clearance, no more than 15 mm p95 clearance,
+fewer than 2% large gaps over 20 mm, and a 1.02-1.10 hair-to-cranium width
+ratio. Preserve hair armatures, bones, weights, materials, UVs, and separately
+named style meshes. Treat nearest-normal sign as a warning on multi-component
+or open head meshes, not proof of penetration; confirm intersections in fixed
+front, back, side, top, and perspective evidence. A Blender style visibility
+setup is not proof that Unity/VRChat expression-menu toggles were authored.
+
+## Completion gate
+
+Resolve or explicitly report the form/fit review findings. Include full-body
+and feature close-ups from the final revision, with affected poses rechecked
+after the last geometry/material edit.
+
+Deliver the requested source/media/export and applicable evidence; fresh-import
+evidence applies when an exported character is requested. For a
+rigged/animated character, include the bone/control map and tested pose/action
+list. State any target-specific validation that could not
+be performed in Blender; a successful GLB import is not proof of runtime avatar
+compatibility.

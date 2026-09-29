@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "blender-agent-studio": {
+      "command": "bun",
+      "args": [
+        "./mcp/server.ts"
+      ],
+      "cwd": ".",
+      "note": "Bounded Blender inspection, authored/evidence rendering, and verified Poly Haven texture/HDRI acquisition."
+    }
+  }
+}

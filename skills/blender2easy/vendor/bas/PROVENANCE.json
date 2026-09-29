@@ -1,0 +1,724 @@
+{
+  "upstream": "https://github.com/ifBars/blender-agent-studio",
+  "commit": "748b18ba4cbb5df6fc1da854e00e4c3526fdd128",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 Bars",
+  "sourceFiles": [
+    {
+      "path": "LICENSE",
+      "upstreamSha256": "657eb4218f1136d4eb0f778355bf242a09808000f93c2350f35aea9211ccf8c1"
+    },
+    {
+      "path": "README.md",
+      "upstreamSha256": "0dd4f8e2696e2e3d429a2ea62dccc61debcb6d1db048a3d55e25d54ebb3115da"
+    },
+    {
+      "path": "SECURITY.md",
+      "upstreamSha256": "836a19642e560b8227fa94324cefc78343b8cc557373a07b884038d7ae0f423f"
+    },
+    {
+      "path": "SKILL.md",
+      "upstreamSha256": "f3a2285fb2017b46d94138a62bc521b5d3e9ad30d50aa239a6ca9394c5d86091"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "upstreamSha256": "a836913a7f107ec70b8e192a445b73922b337148a4e33cf9b92d5a53d88220e8"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "upstreamSha256": "211184181a1dad1c7c8622e5c1e41afb69b9697048c1947694d984dc6c175f95"
+    },
+    {
+      "path": "docs/development.md",
+      "upstreamSha256": "144da632053398ff728f175709e1238639e6fc5a3257e3582a28a56dfb64653d"
+    },
+    {
+      "path": "docs/plugin-quality-evidence.md",
+      "upstreamSha256": "815d15e7117d4775e992dfb5a5cc32d00292751dce61dfa3fdc8a1a3a5a4cbfa"
+    },
+    {
+      "path": "docs/quality-campaign-2026-09-23.md",
+      "upstreamSha256": "f0f4deec37855495faab2327166dec17f974010e3ce52d75b3d527b98f3e9491"
+    },
+    {
+      "path": "docs/quality-development.md",
+      "upstreamSha256": "12d52beb3abd2bd4fefa2afaaa9a99eeb0671a94eb24601c5a4cf8712f9f0413"
+    },
+    {
+      "path": "docs/reference-modeling.md",
+      "upstreamSha256": "3c34a25577e7df55213e72da7bcc1dc57d30f3ae951663221efd166ba582eeed"
+    },
+    {
+      "path": "docs/scene-understanding.md",
+      "upstreamSha256": "24bd8f35ea8fb289d107c1da5d010348ea42b69623b8aaeaee0decf1f761bb7f"
+    },
+    {
+      "path": "plugins/blender-agent-studio/.codexignore",
+      "upstreamSha256": "761cd0655ce3c4854eda293d95f452116628695af3c526e1a05e1a303be589ec"
+    },
+    {
+      "path": "plugins/blender-agent-studio/.mcp.json",
+      "upstreamSha256": "9d7633101337116057bfaf570e2830c60bfbd5e4e5b1129b5c943d7d0dcbec00"
+    },
+    {
+      "path": "plugins/blender-agent-studio/bun.lock",
+      "upstreamSha256": "2a72085ef0526dfa4776aa9ad25b7952e86e39fe6513079a029482a93497a17a"
+    },
+    {
+      "path": "plugins/blender-agent-studio/LICENSE",
+      "upstreamSha256": "657eb4218f1136d4eb0f778355bf242a09808000f93c2350f35aea9211ccf8c1"
+    },
+    {
+      "path": "plugins/blender-agent-studio/package.json",
+      "upstreamSha256": "7965d7550c9a3f604b26b1e0addf1c407aae45e4616317134374af6c84a03984"
+    },
+    {
+      "path": "plugins/blender-agent-studio/README.md",
+      "upstreamSha256": "d38e4892100218e9b3aa73e23aae543e22907379caa0f70eeca7d570ca0f1a3b"
+    },
+    {
+      "path": "plugins/blender-agent-studio/SECURITY.md",
+      "upstreamSha256": "0ae066285cd816322bb1a440d43278a393ba5bf123315356a02c882acca20b90"
+    },
+    {
+      "path": "plugins/blender-agent-studio/.codex-plugin/plugin.json",
+      "upstreamSha256": "4acedc5ddc8f454e3907242d6efa63a4a81509f8f87af69cf54d9beed5d69dab"
+    },
+    {
+      "path": "plugins/blender-agent-studio/mcp/server.test.ts",
+      "upstreamSha256": "2dd58fa02600c7fa5e7def4a2847d054dead497fa763cc9958a36cd5cbfccfa8"
+    },
+    {
+      "path": "plugins/blender-agent-studio/mcp/server.ts",
+      "upstreamSha256": "54612bd6de59002cbf0e881fdabb66f50b37f02e32337b7637ce249ca2a45e9a"
+    },
+    {
+      "path": "plugins/blender-agent-studio/mcp/viewer.test.ts",
+      "upstreamSha256": "54aaa95beb179d71314cd82a7ac067579e1e086a9c5571663aed8ea83287b394"
+    },
+    {
+      "path": "plugins/blender-agent-studio/mcp/viewer.ts",
+      "upstreamSha256": "55e8dc8741b48d0af2cd0582227bc1d7bccadf0953e05458ab3d35c58fa309de"
+    },
+    {
+      "path": "plugins/blender-agent-studio/references/astra-workflow.md",
+      "upstreamSha256": "161de1108b8efdd31f0a21dbb9da3a6c5a05b41f9ed91db98f258238d4b74b27"
+    },
+    {
+      "path": "plugins/blender-agent-studio/runtime/Cargo.lock",
+      "upstreamSha256": "27d3526a2c5a072c1f83f6b5fd00d75851fcbe402f2ebabd4ecac58bf297a5c2"
+    },
+    {
+      "path": "plugins/blender-agent-studio/runtime/Cargo.toml",
+      "upstreamSha256": "8b64fbdbd8aa7bc06622cbc5f6a47064a26b2da8b995228cb712734702d6476a"
+    },
+    {
+      "path": "plugins/blender-agent-studio/scripts/blender-process.test.ts",
+      "upstreamSha256": "cf80d2a79640f1dbf785d9c534292d3da770ec74f81b151d14397e97029372da"
+    },
+    {
+      "path": "plugins/blender-agent-studio/scripts/blender-process.ts",
+      "upstreamSha256": "cbaf047d573ee65fc6fd6e737b59abf5b61a891de213a3a6695e601886ae30ac"
+    },
+    {
+      "path": "plugins/blender-agent-studio/scripts/camera-fit.test.ts",
+      "upstreamSha256": "00a29809bac9f4e849b181bd1ef0f162549c9d15ff0c7bfaa02b75184fefc3e7"
+    },
+    {
+      "path": "plugins/blender-agent-studio/scripts/mixamo.test.ts",
+      "upstreamSha256": "55665a0b544a7d921e4fded51e8ffffc0f53f765e8adb28672790f7368b82490"
+    },
+    {
+      "path": "plugins/blender-agent-studio/scripts/mixamo.ts",
+      "upstreamSha256": "61852845054b191e72e412d55eb4d4d4006d9ebc11d6b17ed84b2c419af33c56"
+    },
+    {
+      "path": "plugins/blender-agent-studio/scripts/motion-inspection.test.ts",
+      "upstreamSha256": "14ab79dd29fcc0129a650262f03e1d3c60c3f57a947a46e6e2fccd54b46b8a71"
+    },
+    {
+      "path": "plugins/blender-agent-studio/scripts/pixabay.test.ts",
+      "upstreamSha256": "f5136674bb4dcd1bfc17f606ee282dfd4a7727217665d74b7bdb52e3ba639a4f"
+    },
+    {
+      "path": "plugins/blender-agent-studio/scripts/pixabay.ts",
+      "upstreamSha256": "406d14083479da7227240bdf8ec73ddabfd5d24fea3162fe64a86c825fab48e1"
+    },
+    {
+      "path": "plugins/blender-agent-studio/scripts/poly-haven.test.ts",
+      "upstreamSha256": "bda2984122a2f07670f2cc4b41dde9595db73153592e8f7cc99ac0b9914e96ed"
+    },
+    {
+      "path": "plugins/blender-agent-studio/scripts/reference-comparison.test.ts",
+      "upstreamSha256": "2919e8c147eff92832851c2b31235099d83bee96fbcfa9e08b5599b66409ba44"
+    },
+    {
+      "path": "plugins/blender-agent-studio/scripts/scene-analysis.test.ts",
+      "upstreamSha256": "0677cd724f2a88f7aa2d1caf237ca07fc5fb5d9144fe36653f41ae247f9067e8"
+    },
+    {
+      "path": "plugins/blender-agent-studio/scripts/scene-analysis.ts",
+      "upstreamSha256": "3231bb8939649c48f070e8f65f97e3ac90ae3e8eb3e2a10025c26a1ad8e37bc3"
+    },
+    {
+      "path": "plugins/blender-agent-studio/scripts/test-python.py",
+      "upstreamSha256": "6e9aaa28a1a2884d2a98720ac0630dcdc544dea5d84e43bb73692440685345b6"
+    },
+    {
+      "path": "plugins/blender-agent-studio/scripts/topology-diagnostics.test.ts",
+      "upstreamSha256": "4749287a44da0a32b2d49f5ed93972fb6d12c74fb9b13569d512a45a90aee222"
+    },
+    {
+      "path": "plugins/blender-agent-studio/mcp/ui/result.ts",
+      "upstreamSha256": "abb69f5822211b67ae89c6ed3e63131f0dabfcb0bf4fb65e2450d9a74e8da360"
+    },
+    {
+      "path": "plugins/blender-agent-studio/mcp/ui/viewer.html",
+      "upstreamSha256": "50b6357419648c576fb38052dc79f6491203661c37a98ed627a5d30a04f0026a"
+    },
+    {
+      "path": "plugins/blender-agent-studio/mcp/ui/viewer.ts",
+      "upstreamSha256": "0b2483afeecdab67262d9006075cc52e4529f35b9e0d42625f2cd50a564fc59f"
+    },
+    {
+      "path": "plugins/blender-agent-studio/runtime/src/lib.rs",
+      "upstreamSha256": "a75ee8a439bda1f8285ed643d0d0a7724ac0ac84e451da1f12807164fe68be4e"
+    },
+    {
+      "path": "plugins/blender-agent-studio/runtime/src/main.rs",
+      "upstreamSha256": "1e91f10240bb506e88eb954c4a1dd0ee7e2175f17d8c7693f9158869dc914923"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/SKILL.md",
+      "upstreamSha256": "d308e9e75edfffe56077946e68bb417c263bd4bdaff110809ac206c92df1e2a4"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-animation-workflow/SKILL.md",
+      "upstreamSha256": "0bd9afdc38ff0c45df613bc311dcde6f43d90183dd6c789c0a122aa8317d8d23"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-art-direction-intake/SKILL.md",
+      "upstreamSha256": "2dbcd5634310dfb749356eb768e25f3531500429e36c92edd4dfc8016593bb59"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/SKILL.md",
+      "upstreamSha256": "548d2bd5de21b57b928581a71b088d71710de3fecbfc64575a1402a6ff26f995"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-character-workflow/SKILL.md",
+      "upstreamSha256": "a50d2d5b77396557f97ca908d5f772fe18a4c0f79e40ab56b3c1fca87a5c8ff6"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-iterative-refinement/SKILL.md",
+      "upstreamSha256": "342f18ca520f502b44193ad74bc46b0fd2becf1d10ad56af91e23efec1727276"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-mcp-integration/SKILL.md",
+      "upstreamSha256": "83e19221a2245f9e86955b9a4a2f950176ba1463ab5b184e915aef84c2bb61bf"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-modeling-workflow/SKILL.md",
+      "upstreamSha256": "5b9663cbede6016154ea961e0e00c6cca165e5afe6bff4525a51ef7ddbd27b2a"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-procedural-workflow/SKILL.md",
+      "upstreamSha256": "89ca0c62693998571d6b7a3b56f6818500b4df6676d049233cbaa70abf8288d7"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-rendering-workflow/SKILL.md",
+      "upstreamSha256": "f67810948b7d8f52ff8c0ef7365625bb377f800039719274d19c8103f83944eb"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-simulation-workflow/SKILL.md",
+      "upstreamSha256": "a4fe25cf9217b5a817cfb2404735ee1a237da8a6674992aa5df8aac4575cf0fd"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/agents/openai.yaml",
+      "upstreamSha256": "f81e86fe1d646e240452e1931bb38403eb9c445f9d335da2bd60a8677d184f66"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/references/astra-0.6-validation.md",
+      "upstreamSha256": "b0bebb92bff206b4f2cf2f2844cff52d72b4ebb00bb3983162a3aa640751a8d4"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/references/astra-workflow.md",
+      "upstreamSha256": "161de1108b8efdd31f0a21dbb9da3a6c5a05b41f9ed91db98f258238d4b74b27"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/references/intake-cases.json",
+      "upstreamSha256": "9f7f90bb547b8433b7f44a0e7beac6e47631f4042bec03b4040293d74f1f9c2c"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/references/methodology.md",
+      "upstreamSha256": "b5aa6ce6476c4316957d2a4c7005fc510dacab813faefdf29bd2665b6e3a8831"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/references/open-source-benchmark-landscape.md",
+      "upstreamSha256": "a448ec5ca329bec379c6d56a4147db2b3b1398a289a420c95d16dc2a348e1f40"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/references/quality-suites.md",
+      "upstreamSha256": "215e377a952669e70aef82ee7f50185e843a9ec39bc125d94bc79133bed46d7f"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/references/validated-results.md",
+      "upstreamSha256": "40f160159917e208323e4560a9a09882ece636a7087bcb655a1acf71ba17aeca"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/benchmark_mcp.ts",
+      "upstreamSha256": "126659fede0d4c82fa1f2335a41eddc2b3801034d85298bf3d0c8acd79336cfa"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/compare_runs.test.ts",
+      "upstreamSha256": "a56cf9c4e831795be042cd19861400719d1f4653f4afa27db887c80db15f355b"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/compare_runs.ts",
+      "upstreamSha256": "97c2a496b5575ebb6478f40f45a72a5bb10c70354f314176a2432c0ac5c09892"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/model-options.ts",
+      "upstreamSha256": "e0b94208b66b46086c2984164c8d1a230e8256e69ec95de43474e8d34d5c2f9a"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/motion-evidence.test.ts",
+      "upstreamSha256": "c1b5ababe39d28e970cd7ded86c0179ea81eb8d35bc2d61fb101d7b5d55e3bfa"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/motion-evidence.ts",
+      "upstreamSha256": "f777b473b37621ef74dba8ac3eca2aabc07a47fbb20a3618d45001431851041a"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/pinned-mcp.test.ts",
+      "upstreamSha256": "05989d9390812b8542665331662849657377ec486ce0358f83c10037a1fd3aec"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/pinned-mcp.ts",
+      "upstreamSha256": "900d29a5c0da5c3d3ff3c57aa5f591e2ed74ebbf6d9e143aa62209061dcc92ac"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/provenance.test.ts",
+      "upstreamSha256": "f4a9c6976791b08c4e8d5fded6ea6687ee4f4ad6a6a3bd43fcd3d79b9b3e2cc5"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/provenance.ts",
+      "upstreamSha256": "169ed770f5d37784d4ea20c9d895e6d5f6fb564ee021ed405dd7fa85a2e347a8"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/quality-tasks.ts",
+      "upstreamSha256": "5ac57beb6f9aca37f65f8645f548db910f7b68265b20db35e1113dc2798443b3"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/rescore_run.ts",
+      "upstreamSha256": "19363301d16e94be8ba0e29b0dc60c6b15ac922151ec7920ccdfc23a1119bab4"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/run_benchmark.test.ts",
+      "upstreamSha256": "838334438d23461ec09bb86bea5945d5afe3f4534eb40460ff3c9d757845335e"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/run_benchmark.ts",
+      "upstreamSha256": "7af77df96c5127a4e0cd2bb86fbbd39ef6dca4a5e3e64d6ec56f91f801cb5a3b"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/run_vrchat_hair_benchmark.ts",
+      "upstreamSha256": "9f80411088d9923a85cd2ad022c0f2a7c924266e2980d3d84d48403b9abdcba6"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/score.test.ts",
+      "upstreamSha256": "74c0833adb695bab4c2672c78c60e29f81d651e70990fcb36262e20b95bd2b5c"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/score.ts",
+      "upstreamSha256": "bc27c1c7cfb3abf73651d39fc661c04e5fab12c824394546dc19a0e1bfc5a7a1"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/tasks.test.ts",
+      "upstreamSha256": "01ab76931dc42183fda76b1ddcf5adb4743028f819798dad166f01a3b74fd6d1"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/tasks.ts",
+      "upstreamSha256": "d8059b19c31c2c3d9099f3aee7a8b60188ed79bd4cbe5d5a81fad78b6cfc9f6c"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/trace.test.ts",
+      "upstreamSha256": "56a755d1a225f2f4083c92e9f5e6d3fed651a7cf40949c9bfe4dbb91c8b13025"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/trace.ts",
+      "upstreamSha256": "328562b2069ae0dfa12e6aab5a339aa5ddfe2e90264c2addadec52ac0b815e17"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/verified_score.test.ts",
+      "upstreamSha256": "00637789e11ef1c08f9f21508d96d61a70570ff9fd1e35ab2094eb8d6280143f"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/scripts/verified_score.ts",
+      "upstreamSha256": "14dae40107b21bbe3ca52cddc6a4df22f5a9e63ae42c59c403a90ad8ce8b906d"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-animation-workflow/agents/openai.yaml",
+      "upstreamSha256": "4682af4ac681e5a4fbb9a05da362ffa6acdacac2b3b10e662dcdec4e6dfc998c"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-animation-workflow/references/astra-workflow.md",
+      "upstreamSha256": "161de1108b8efdd31f0a21dbb9da3a6c5a05b41f9ed91db98f258238d4b74b27"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-animation-workflow/references/mechanical-animation.md",
+      "upstreamSha256": "d765ac6fb4847ea4d57996eb3efc99cc68643f7fc34f8a9e2d2cddc9d5aba408"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-animation-workflow/references/mixamo.md",
+      "upstreamSha256": "bde69de167c870ed6eb301f15ffc3422132720c32df3a98b8e52751f18c23255"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-animation-workflow/scripts/import_mixamo.py",
+      "upstreamSha256": "1e4335b3d9f077c1c5ea76741da2c0f8d2feafe8919dea763a5a3a1dcc0a48c8"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-art-direction-intake/agents/openai.yaml",
+      "upstreamSha256": "cdb5137aa301702d28d12885dcf96bea3cc6768fa13623575e2e715bf0174cf6"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-art-direction-intake/references/astra-workflow.md",
+      "upstreamSha256": "161de1108b8efdd31f0a21dbb9da3a6c5a05b41f9ed91db98f258238d4b74b27"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/agents/openai.yaml",
+      "upstreamSha256": "65aab6282b7a420da4e5df4f64c095e369107ec1602b8955e8818a725e83ad05"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/references/astra-workflow.md",
+      "upstreamSha256": "161de1108b8efdd31f0a21dbb9da3a6c5a05b41f9ed91db98f258238d4b74b27"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/references/quality-gates.md",
+      "upstreamSha256": "ff456d7790a314cf355b4213b27653258fb4b3d928db7f2f3bc1c89de3c473f4"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/scripts/compare_reference.py",
+      "upstreamSha256": "0d9cde5c04ac0b9d0ccc2e6895f55923be041216f0a6724aed96ba01350566d1"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/scripts/diagnose_topology.py",
+      "upstreamSha256": "db4d32c8a83b89d7591cf2cfb541d198e9f5ade0ad4b9db77cf156bb878c275f"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/scripts/evidence_settings.py",
+      "upstreamSha256": "0d69f461d7de1f70d6072c1ff35ff1d839212474ab88037a49ab9f08a3ad65b4"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/scripts/extract_scene_ir.py",
+      "upstreamSha256": "9243307fe2b89d79886e4a088864ed4b33e1bf0e1c2222e5deeb541fb577743b"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/scripts/fit_reference_camera.py",
+      "upstreamSha256": "24f550e090f91c0f954854329834d674ab089639fbb20147629f3ebd587a9892"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/scripts/inspect_asset.py",
+      "upstreamSha256": "b336f6af97e5dfc0cbb93e21246c7dad6c3ac7b659d060a2df182ed1983e203a"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/scripts/inspect_motion.py",
+      "upstreamSha256": "3871791e2d88e56c13fa45801edd16f58b3415a87d7a8dba089862cee032e4f7"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/scripts/render_evidence.py",
+      "upstreamSha256": "3b5b2c030fccd7fa4527a1e9b639629443e90801bdab75ecbdbcc7bc7ffddc84"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/scripts/test_evidence_blender.py",
+      "upstreamSha256": "590745c15a4a021fb8a4c843897c8710333420b529e7e4d5d98ea9df71ee1cc2"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/scripts/test_evidence_settings.py",
+      "upstreamSha256": "87fb08d279a581be9bafc3a21732ecdcfb7efc6357f1de494827c4b1d3680b6c"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/scripts/_blender_evidence_smoke.py",
+      "upstreamSha256": "6f9f273efbcc8bb97a222af222b6e9f7121fde60a46a8263b2967fd04de5901d"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/scripts/_blender_scene_ir_fixture.py",
+      "upstreamSha256": "66e7e1681c924666873af158cc1eb2d3b6efa3b37a264466e9f4fce0bc60b6e7"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-character-workflow/agents/openai.yaml",
+      "upstreamSha256": "c60fd9ce47f72fa7d1b9839bf1461c70606d0af5775e95a5455e8b3786f29fe0"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-character-workflow/references/astra-workflow.md",
+      "upstreamSha256": "161de1108b8efdd31f0a21dbb9da3a6c5a05b41f9ed91db98f258238d4b74b27"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-character-workflow/references/character-form-review.md",
+      "upstreamSha256": "9927d9252a5e05ef6cfa66da68cc0cd76b6a4330922541282440aca61b203585"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-character-workflow/scripts/fit_vrchat_hair.py",
+      "upstreamSha256": "85c60cf0ec0ad06efa072e919d2f6dc52ff6c2c5974269d8f33a75b4d0982c80"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-iterative-refinement/agents/openai.yaml",
+      "upstreamSha256": "166e7792f4897a248527d7c4532ca80b851010aaeeff36be04d54327431fb244"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-iterative-refinement/references/astra-workflow.md",
+      "upstreamSha256": "161de1108b8efdd31f0a21dbb9da3a6c5a05b41f9ed91db98f258238d4b74b27"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-mcp-integration/agents/openai.yaml",
+      "upstreamSha256": "9f35880212287a72c5abcc4c67894774c0195929c5c5b50d07c8f7cd29648b11"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-mcp-integration/references/astra-workflow.md",
+      "upstreamSha256": "161de1108b8efdd31f0a21dbb9da3a6c5a05b41f9ed91db98f258238d4b74b27"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-mcp-integration/references/mcp-options.md",
+      "upstreamSha256": "e8ec2f1874aa2e726d458106fa3668c719b6b5801978accac70a1d0d19eb8c35"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-modeling-workflow/agents/openai.yaml",
+      "upstreamSha256": "671064ea16be98f575f579dae659f3a6acce6f2b107c88873f8eb03fa8784e4a"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-modeling-workflow/references/astra-workflow.md",
+      "upstreamSha256": "161de1108b8efdd31f0a21dbb9da3a6c5a05b41f9ed91db98f258238d4b74b27"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-modeling-workflow/references/image-to-3d.md",
+      "upstreamSha256": "e3dfdb2c6a0a7506b1a110acd9eb5792f25102cedcb95a06f126d907514504cd"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-modeling-workflow/references/modeling-contract.md",
+      "upstreamSha256": "a3af2480a919f5301f7f6baba514b3ba3b746d1834b08dbb0b22b8e5b080f720"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-modeling-workflow/references/procedural-patterns.md",
+      "upstreamSha256": "c7b3b0c58f7ce77f730ce6922139189d92236d20f76b5f00cae66830ab608502"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-modeling-workflow/references/staged-quality-workflow.md",
+      "upstreamSha256": "da0d5f7c596f0016dcff117c43d886565b6f2aae2ec48c100b27ad5685c5eabb"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-procedural-workflow/agents/openai.yaml",
+      "upstreamSha256": "5cf8b634d5d3f2d7ae6cb3a889eb438ca91621b7cb512422748f494d1d4e500c"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-procedural-workflow/references/astra-workflow.md",
+      "upstreamSha256": "161de1108b8efdd31f0a21dbb9da3a6c5a05b41f9ed91db98f258238d4b74b27"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-rendering-workflow/agents/openai.yaml",
+      "upstreamSha256": "056f3f11d6fe94290a3232d6ec5c628121644e01499722d79e1cffb63e708f5c"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-rendering-workflow/references/astra-workflow.md",
+      "upstreamSha256": "161de1108b8efdd31f0a21dbb9da3a6c5a05b41f9ed91db98f258238d4b74b27"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-rendering-workflow/references/interiors-and-atmosphere.md",
+      "upstreamSha256": "7e3737066680083bf66bf964dde310c59a7d9b65acb63c19311069a4b1b1ece9"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-rendering-workflow/references/poly-haven-materials.md",
+      "upstreamSha256": "a04bc2847c2f84afbe423eeb709c2247fbb78e3d7a44f8a1adbf7dde6c5dd62f"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-rendering-workflow/scripts/poly-haven-cli.ts",
+      "upstreamSha256": "01f738dd8dea6b353e5a5a4da3c2a41eadc074b00c103c6324ea851445a60c55"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-rendering-workflow/scripts/poly-haven.ts",
+      "upstreamSha256": "152104756e984fb7ef2e6e845b94d9a8631ac4ecac9618011e04450dfc8eaa89"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-rendering-workflow/scripts/render_scene.py",
+      "upstreamSha256": "c57b156f768fd53cdda2ad807b089907cda4e9bc708c17c712de82e3babcfea6"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-rendering-workflow/scripts/test_denoise_policy.py",
+      "upstreamSha256": "1ba9b7d0f4781a94a46240c116e1811bd8892df730a346d441ee9172da46fc1f"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-rendering-workflow/scripts/test_render_scene.py",
+      "upstreamSha256": "4077e9370d0ef475b3e34b22600290a346d23f0abf0df24abce33d78a508f358"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-simulation-workflow/agents/openai.yaml",
+      "upstreamSha256": "7f0b9c7d89553b21f94f3fefdff7ad2ac7d272e40bc1333973e0c415de4cab43"
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-simulation-workflow/references/astra-workflow.md",
+      "upstreamSha256": "161de1108b8efdd31f0a21dbb9da3a6c5a05b41f9ed91db98f258238d4b74b27"
+    }
+  ],
+  "localChanges": [
+    {
+      "path": "SKILL.md",
+      "vendoredSha256": "cd59d2e1b3e379a3250de85e3e0433568387ee250456ea8488dc461205b2a546",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/references/astra-workflow.md",
+      "vendoredSha256": "6960f514443ea3af86713859bcfa87bc78f3d64303a3776875781c7671e0f9ed",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/SKILL.md",
+      "vendoredSha256": "ae83a0d84859cf03a9158b7950598dca55328bc0d3efe9ea53cbb3ab7027a443",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-agent-benchmark/references/astra-workflow.md",
+      "vendoredSha256": "36f564f424e7801e8aaf2a2373dc2cee42385d0ee30da3efbb6e62ef648acc63",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-animation-workflow/SKILL.md",
+      "vendoredSha256": "4ac210518616b11d7923c97ea7ce97fc11b667c92c13a3313b53ee5a1a086658",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-animation-workflow/references/astra-workflow.md",
+      "vendoredSha256": "36f564f424e7801e8aaf2a2373dc2cee42385d0ee30da3efbb6e62ef648acc63",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-art-direction-intake/SKILL.md",
+      "vendoredSha256": "9c5278bd9fa7bf98db726353add4f58d417b42ef5e5b6723168f5c07ab0b9be4",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-art-direction-intake/references/astra-workflow.md",
+      "vendoredSha256": "36f564f424e7801e8aaf2a2373dc2cee42385d0ee30da3efbb6e62ef648acc63",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/SKILL.md",
+      "vendoredSha256": "cc6bf0c7fa173db5da4478b795e70e60af0de614948237131618ed06838501ea",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/references/astra-workflow.md",
+      "vendoredSha256": "36f564f424e7801e8aaf2a2373dc2cee42385d0ee30da3efbb6e62ef648acc63",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/references/quality-gates.md",
+      "vendoredSha256": "477b6d293dc6fdc114c7d94c78d3571b4e4c5bf96f396f23e1389cae14b471b3",
+      "changes": "v0.7: align source, delivery and scope rules; centralize shared Blender execution guidance."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/scripts/compare_reference.py",
+      "vendoredSha256": "5fd062a46b068f235324e4d64779fb22b9a94e0116fc30a8de5ea6702d0f35f7",
+      "changes": "Disable embedded scripts; explicit frame selection; fresh outputs and evidence camera/metadata fixes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/scripts/diagnose_topology.py",
+      "vendoredSha256": "850c26a527586029f68b7565e1153b9a632f353eb302a9f09b4b0fd76d4c7632",
+      "changes": "Disable embedded scripts; explicit frame selection; fresh outputs and evidence camera/metadata fixes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/scripts/fit_reference_camera.py",
+      "vendoredSha256": "776dfa87e4773f9c76e40de3522cee83a865a4c118b0333c6f1ab23c5f007ac5",
+      "changes": "Disable embedded scripts; explicit frame selection; fresh outputs and evidence camera/metadata fixes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/scripts/inspect_asset.py",
+      "vendoredSha256": "6801fa58621af94da08fd1a6be313581fdf5076011b821e3f5a2a1666c336f6d",
+      "changes": "Disable embedded scripts; explicit frame selection; fresh outputs and evidence camera/metadata fixes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-asset-validation/scripts/render_evidence.py",
+      "vendoredSha256": "12c563f2bd6fb4785a07795a16a145b16790d9e7e7bc122414149a03a62cce25",
+      "changes": "Disable embedded scripts; explicit frame selection; fresh outputs and evidence camera/metadata fixes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-character-workflow/SKILL.md",
+      "vendoredSha256": "11f7fafd839779427c33e5824d49c1ba7eca7a98e9d6da5ecdd584c4a6fdcb8e",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-character-workflow/references/astra-workflow.md",
+      "vendoredSha256": "36f564f424e7801e8aaf2a2373dc2cee42385d0ee30da3efbb6e62ef648acc63",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-iterative-refinement/SKILL.md",
+      "vendoredSha256": "9e68a96b681b0755367729e64cf603a3f99009ae9fec9c5d564379e0ea3b76b9",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-iterative-refinement/references/astra-workflow.md",
+      "vendoredSha256": "36f564f424e7801e8aaf2a2373dc2cee42385d0ee30da3efbb6e62ef648acc63",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-mcp-integration/SKILL.md",
+      "vendoredSha256": "9480b7715cc37944943549815283b72b54a3f5b76c5a4333d5940f43321ae397",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-mcp-integration/references/astra-workflow.md",
+      "vendoredSha256": "36f564f424e7801e8aaf2a2373dc2cee42385d0ee30da3efbb6e62ef648acc63",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-modeling-workflow/SKILL.md",
+      "vendoredSha256": "6eff713efe288cb22375d2fe13c7f2c91d6de743d5ef38ad2ff481ba271c35a2",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-modeling-workflow/references/astra-workflow.md",
+      "vendoredSha256": "36f564f424e7801e8aaf2a2373dc2cee42385d0ee30da3efbb6e62ef648acc63",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-modeling-workflow/references/staged-quality-workflow.md",
+      "vendoredSha256": "15c17a52c706b6010d0631e0eb6fa400f8a4d20b4347bc2eb879320a2332ddf9",
+      "changes": "v0.7: align source, delivery and scope rules; centralize shared Blender execution guidance."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-procedural-workflow/SKILL.md",
+      "vendoredSha256": "2a41dfebf4c25b4bca9ac6fd93192619a6f7a9acb98cc4b2bdb8d639292e8fc9",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-procedural-workflow/references/astra-workflow.md",
+      "vendoredSha256": "36f564f424e7801e8aaf2a2373dc2cee42385d0ee30da3efbb6e62ef648acc63",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-rendering-workflow/SKILL.md",
+      "vendoredSha256": "eb4d31d53c2f11825b9600945f87f6fb2065e8e7db3aa93ecf3426590ce01ad4",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-rendering-workflow/references/astra-workflow.md",
+      "vendoredSha256": "36f564f424e7801e8aaf2a2373dc2cee42385d0ee30da3efbb6e62ef648acc63",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-simulation-workflow/SKILL.md",
+      "vendoredSha256": "3bff4548edde27ad7d92d2adf15ba864fc01b10e24c7bdebaf9b1c2d1b19f38c",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    },
+    {
+      "path": "plugins/blender-agent-studio/skills/blender-simulation-workflow/references/astra-workflow.md",
+      "vendoredSha256": "36f564f424e7801e8aaf2a2373dc2cee42385d0ee30da3efbb6e62ef648acc63",
+      "changes": "v0.7: unify source/delivery/local-repair contracts and centralize domain execution guidance; preserve original upstream hashes."
+    }
+  ],
+  "localFiles": [
+    {
+      "path": "plugins/blender-agent-studio/references/execution.md",
+      "sha256": "dd815a67d00480d34e4a6506437146eac1244ebc86cc9095e14b1794aa300dc2",
+      "purpose": "Single maintained, host-neutral Blender execution guide adapted from upstream shared guidance."
+    }
+  ]
+}

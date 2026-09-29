@@ -1,0 +1,21 @@
+{
+  "name": "blender-agent-studio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup:runtime": "cargo build --release --locked --manifest-path runtime/Cargo.toml",
+    "test:runtime": "cargo test --locked --manifest-path runtime/Cargo.toml",
+    "mcp": "bun mcp/server.ts",
+    "test": "bun test",
+    "test:python": "python scripts/test-python.py",
+    "benchmark": "bun skills/blender-agent-benchmark/scripts/run_benchmark.ts",
+    "benchmark:mcp": "bun skills/blender-agent-benchmark/scripts/benchmark_mcp.ts",
+    "benchmark:vrchat-hair": "bun skills/blender-agent-benchmark/scripts/run_vrchat_hair_benchmark.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/ext-apps": "2.0.0",
+    "@modelcontextprotocol/client": "2.1.0",
+    "@modelcontextprotocol/server": "2.1.0",
+    "zod": "4.6.5"
+  }
+}

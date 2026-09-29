@@ -1,0 +1,32 @@
+export const messages = {
+  en: {
+    'viewport.canvas': 'Three.js 3D editing viewport',
+    'viewport.loading': 'Loading Blender scene…',
+    'viewport.loadFailed': 'The 3D preview could not load. Generate a new preview.',
+    'viewport.generatePreview': 'Generate a Blender scene preview to view the model',
+    'viewport.distance': '{value} {unit}',
+    'viewport.previewUnits': 'preview units',
+    'viewport.modelMeasurement': 'Model distance in the declared project units; not a calibrated physical measurement',
+    'viewport.previewMeasurement': 'Distance in Three.js preview space; not a calibrated physical measurement',
+  },
+  'zh-Hans': {
+    'viewport.canvas': 'Three.js 3D 编辑视口',
+    'viewport.loading': '正在加载 Blender 场景…',
+    'viewport.loadFailed': '3D 预览加载失败。请重新生成预览。',
+    'viewport.generatePreview': '生成 Blender 场景预览后即可查看真实模型',
+    'viewport.distance': '{value} {unit}',
+    'viewport.previewUnits': '预览单位',
+    'viewport.modelMeasurement': '模型尺寸（项目声明单位）；不是经标定的实物测量',
+    'viewport.previewMeasurement': 'Three.js 预览空间中的距离；不是经标定的实物尺寸',
+  },
+  'zh-Hant': {
+    'viewport.canvas': 'Three.js 3D 編輯視口',
+    'viewport.loading': '正在載入 Blender 場景…',
+    'viewport.loadFailed': '3D 預覽載入失敗。請重新產生預覽。',
+    'viewport.generatePreview': '產生 Blender 場景預覽後即可查看實際模型',
+    'viewport.distance': '{value} {unit}',
+    'viewport.previewUnits': '預覽單位',
+    'viewport.modelMeasurement': '模型尺寸（專案宣告單位）；不是經校準的實物量測',
+    'viewport.previewMeasurement': 'Three.js 預覽空間中的距離；不是經校準的實物尺寸',
+  },
+};

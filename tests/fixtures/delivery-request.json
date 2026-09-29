@@ -1,0 +1,50 @@
+{
+  "title": "检查成片的动作和节奏",
+  "question": "播放后，有没有需要我继续调整的地方？",
+  "context": "这是 Blender 已渲染的版本。可以定位到具体时刻并留下反馈。",
+  "stage": "delivery",
+  "thread_id": "review-http-test",
+  "segments": [
+    {
+      "id": "intro",
+      "title": "展示外观",
+      "source_range": [
+        1,
+        6
+      ]
+    },
+    {
+      "id": "open",
+      "title": "打开盒盖",
+      "source_range": [
+        7,
+        38
+      ]
+    },
+    {
+      "id": "inside",
+      "title": "展示内部",
+      "source_range": [
+        39,
+        48
+      ]
+    }
+  ],
+  "focus": {
+    "shot_id": "opening",
+    "segment_id": "inside",
+    "object_ids": [
+      "lid"
+    ],
+    "source_frame": 39,
+    "source_range": [
+      1,
+      48
+    ],
+    "camera_id": "hero"
+  },
+  "controls": [],
+  "media": {
+    "path": "rendered.mp4"
+  }
+}

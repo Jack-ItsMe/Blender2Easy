@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender2Easy"
+  short_description: "由 Agent 制作物品动画，按建模、动作、镜头和成片阶段邀请用户局部确认"
+  default_prompt: "使用 $blender2easy 制作物品动画，先准备模型和段落，在需要我判断时打开限定范围的预览窗口，再根据反馈完成经过检查的片段。"

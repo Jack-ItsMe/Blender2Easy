@@ -1,0 +1,16 @@
+name: Workflow improvement
+description: Suggest a concrete improvement or share a workflow that is difficult today.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: workflow
+    attributes:
+      label: What are you trying to make?
+      description: Describe the task and where the current workflow gets in your way.
+    validations:
+      required: true
+  - type: textarea
+    id: improvement
+    attributes:
+      label: What would help?
+      description: A small example, sketch or proposed behavior is more useful than a feature name alone.

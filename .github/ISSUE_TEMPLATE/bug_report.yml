@@ -1,0 +1,25 @@
+name: Bug report
+description: Report a reproducible problem with the skill, preview or rendering workflow.
+labels: [bug]
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, agent host, Blender2Easy version, Python and Blender versions. Remove personal paths from doctor output.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Include the command or prompt and the smallest shareable project that demonstrates the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual behavior
+      description: Add a screenshot or relevant error if useful. Do not include credentials or private assets.
+    validations:
+      required: true
